@@ -11,8 +11,8 @@ public class InterfazBilleteraVirtual {
 
 	static Scanner teclado = new Scanner(System.in);
 	private static Operador operador = new Operador("","","","", false);
-	private static Transaccion transaccion;
 	private static BilleteraVirtual binAnce = new BilleteraVirtual("Bin Ance");
+	private static Transaccion transaccion;
 	
 	public static void main(String[] args) {
 		
@@ -28,7 +28,6 @@ public class InterfazBilleteraVirtual {
 			case 2: 
 				// TODO: Si no esta autenticado, no puede realizar las siguiente operaciones. Se debe mostrar el nombre y apellido
 				iniciarSesion(operador);
-				mostarNombreYApellidoDelOperador();
 				break;
 			case 3:
 				// TODO: Mostrar mensaje en caso de éxito o error
@@ -110,18 +109,13 @@ public class InterfazBilleteraVirtual {
 		 *  - Autenticar usuario. 
 		 *  - Mostrar nombre y apellido del usuario.
 		 */		
-		String nombre, apellido, nickName, contrasenia;
+		String nickName, contrasenia;
 		
 		System.out.println("Ingrese su usuario:");
 		nickName = teclado.next();
 		
 		System.out.println("Ingrese su contraseña:");
 		contrasenia = teclado.next();
-		
-		nombre = operador.getNombre();
-		apellido = operador.getApellido();
-		
-		operador = new Operador(nombre,apellido,nickName,contrasenia,false);
 
 		if(operador.iniciarSesion(nickName, contrasenia) == true) {
 			System.out.println("Se inicia sesión satisfactoriamente");
@@ -131,14 +125,10 @@ public class InterfazBilleteraVirtual {
 			if(operador.estaHabilitadoParaRealizarTransacciones() == true) {
 				System.out.println("El usuario se encuentra habilitado para realizar transacciones");	
 			}
+			System.out.println("Bienvenido (a): "+operador.toString());	
 		}else {
 			System.out.println("No se pudo iniciar sesión, inténtelo de nuevo");
-		}	
-	}
-	
-	private static void mostarNombreYApellidoDelOperador() {
-		
-		System.out.println("Bienvenido: "+operador.toString());		
+		}
 	}
 	
 	private static void comprarCriptomonedas(BilleteraVirtual binAnce) {

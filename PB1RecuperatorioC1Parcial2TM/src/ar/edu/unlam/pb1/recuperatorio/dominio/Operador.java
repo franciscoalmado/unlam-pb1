@@ -5,7 +5,7 @@ public class Operador {
 	private String apellido;
 	private String nickName;
 	private String contrasenia;
-	private boolean habilitadoParaRealizarTransacciones;
+	private boolean ishabilitadoParaRealizarTransacciones;
 	private boolean seInicioSesion;
 	private boolean isAutenticado;
 	/*
@@ -16,8 +16,8 @@ public class Operador {
 		this.apellido = apellido;
 		this.nickName = nickName;
 		this.contrasenia = contrasenia;
-		this.habilitadoParaRealizarTransacciones = habilitadoParaRealizarTransacciones;
-		this.habilitadoParaRealizarTransacciones = false;
+		this.ishabilitadoParaRealizarTransacciones = habilitadoParaRealizarTransacciones;
+		this.ishabilitadoParaRealizarTransacciones = false;
 		this.seInicioSesion = false;
 		this.isAutenticado = false;
 	}
@@ -73,10 +73,10 @@ public class Operador {
 	public boolean estaHabilitadoParaRealizarTransacciones() {
 		
 		if(estaAutenticado() == true) {
-			this.habilitadoParaRealizarTransacciones = true;
+			this.ishabilitadoParaRealizarTransacciones = true;
 		}
 		
-		return this.habilitadoParaRealizarTransacciones;
+		return this.ishabilitadoParaRealizarTransacciones;
 	}
 	
 	public String getNombre() {
