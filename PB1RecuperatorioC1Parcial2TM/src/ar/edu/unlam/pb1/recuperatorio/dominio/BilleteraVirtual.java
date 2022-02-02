@@ -30,7 +30,7 @@ public class BilleteraVirtual {
 		
 		boolean sePuedeComprarOVender = false;
 		
-		if(CANTIDAD_DE_CRIPTOMONEDAS_EN_TRANSACCION >= cantidad) {
+		if(cantidad <= CANTIDAD_DE_CRIPTOMONEDAS_EN_TRANSACCION) {
 			sePuedeComprarOVender = true;
 		}
 		
