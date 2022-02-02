@@ -210,7 +210,7 @@ public class AdministracionLibreria {
 		System.out.println("Libros según su género: ");
 		
 		for(int i=0; i < libros.length; i++) {
-			if(libros[i] != null && libros[i].getGenero() == genero){
+			if(libros[i] != null && libros[i].getGenero().equals(genero)){
 				System.out.println(libros[i].toString());
 			}
 		}		
