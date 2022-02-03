@@ -21,7 +21,7 @@ public class Pasajero {
 	}
 	
 	public int getDni() {
-		return dni;
+		return this.dni;
 	}
 	
 	public void setDni(int dni) {
@@ -29,7 +29,7 @@ public class Pasajero {
 	}
 	
 	public String getNombre() {
-		return nombre;
+		return this.nombre;
 	}
 	
 	public void setNombre(String nombre) {
@@ -38,6 +38,6 @@ public class Pasajero {
 
 	@Override
 	public String toString() {
-		return "Pasajero [DNI: " + dni + ", nombre: " + nombre + ", apellido: " + apellido + "]";
+		return "Pasajero [DNI: " + this.dni + ", nombre: " + this.nombre + ", apellido: " + this.apellido + "]";
 	}
 }
