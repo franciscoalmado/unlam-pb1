@@ -13,7 +13,7 @@ public class Pasajero {
 	}
 	
 	public String getApellido() {
-		return apellido;
+		return this.apellido;
 	}
 	
 	public void setApellido(String apellido) {
