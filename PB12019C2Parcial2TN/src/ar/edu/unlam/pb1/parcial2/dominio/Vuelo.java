@@ -61,9 +61,9 @@ public class Vuelo {
 		*/
 		boolean isDisponible = false;
 		
-		for(int i=0; i < asientos.length; i++){
-			for(int j=0; j < asientos.length; j++) {
-				if(asientos[i][j] == null){
+		for(int i=0; i < this.asientos.length; i++){
+			for(int j=0; j < this.asientos.length; j++) {
+				if(this.asientos[i][j] == null){
 					isDisponible = true;
 					break;
 				}
@@ -80,7 +80,7 @@ public class Vuelo {
 		*/
 		
 		for(int i=0; i < this.pasajeros.length; i++){
-			if(this.pasajeros[i].getDni() == dni){
+			if(this.pasajeros[i] != null && this.pasajeros[i].getDni() == dni){
 				return this.pasajeros[i];
 			}	
 		}
@@ -135,9 +135,9 @@ public class Vuelo {
 		*/
 		String mapaDeAsientos = "";
 		
-		for(int i=0; i < asientos.length; i++){
-			for(int j=0; j < asientos[i].length; j++){
-				if(asientos[i][j] == null){
+		for(int i=0; i < this.asientos.length; i++){
+			for(int j=0; j < this.asientos[i].length; j++){
+				if(this.asientos[i][j] == null){
 					mapaDeAsientos += ("L"+"\t");
 				}
 				else{

@@ -108,7 +108,7 @@ public class Checkin {
 			System.out.println("Ingrese columna: ");
 			columna = teclado.nextInt();
 			
-			if(actual.asignarAsiento(actual.buscarPasajero(dni), fila, columna)){
+			if(actual.asignarAsiento(pasajeroASentar, fila, columna)){
 				System.out.println("Asiento asignado exitosamente.");
 			}else{
 				System.out.println("No se pudo asignar un asiento. Inténtelo de nuevo.");
@@ -125,12 +125,12 @@ public class Checkin {
 		*/
 		System.out.println("Lista de pasajeros ordenada de forma ascendente por su número de DNI:");
 		
-		Pasajero auxiliar = null;
 		Pasajero[] listaDePasajerosOrdenadaPorDNI = actual.getPasajeros();
+		Pasajero auxiliar = null;
 		
 		for(int i=1; i < listaDePasajerosOrdenadaPorDNI.length; i++) {
 			for(int j=0; j < listaDePasajerosOrdenadaPorDNI.length-1; j++){
-				if(listaDePasajerosOrdenadaPorDNI[j].getDni() > listaDePasajerosOrdenadaPorDNI[j+1].getDni()) {
+				if(listaDePasajerosOrdenadaPorDNI[i] != null && listaDePasajerosOrdenadaPorDNI[j].getDni() > listaDePasajerosOrdenadaPorDNI[j+1].getDni()) {
 					auxiliar = listaDePasajerosOrdenadaPorDNI[j+1];
 					listaDePasajerosOrdenadaPorDNI[j+1] = listaDePasajerosOrdenadaPorDNI[j];
 					listaDePasajerosOrdenadaPorDNI[j] = auxiliar;		
