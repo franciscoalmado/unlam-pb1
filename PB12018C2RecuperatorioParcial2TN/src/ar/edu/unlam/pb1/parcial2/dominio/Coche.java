@@ -49,8 +49,7 @@ public class Coche {
 	
 	public String calcularID() {
 		/*
-		 *Incorpora un atributo ID, el cual esté compuesto por la concatenación del modelo del coche 
-		 *más un valor aleatorio. 
+		 *Incorpora un atributo ID, el cual está compuesto por la concatenación del modelo del coche más un valor aleatorio. 
 		 */
 		String idCalculado = "";
 		int valorAleatorio = (int) (Math.random() * 1000 + 1);
@@ -67,7 +66,7 @@ public class Coche {
 		int antiguedad = 0;
 		
 		if(this.anio < this.ANIO_ACTUAL) {
-			antiguedad = this.ANIO_ACTUAL - anio;
+			antiguedad = this.ANIO_ACTUAL - this.anio;
 		}else {
 			antiguedad = 0;
 		}
