@@ -11,7 +11,7 @@ public class InterfazConcesionaria {
 	public static void main(String[] args) {
 		
 		System.out.println("Bienvenido ");
-		int cantidadDeCochesEnLaFlota = 2;
+		int cantidadDeCochesEnLaFlota = 5;
 		Concesionaria autoCity = new Concesionaria(cantidadDeCochesEnLaFlota);
 	
 		int opcion = 0;
