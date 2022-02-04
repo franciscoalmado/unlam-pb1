@@ -252,7 +252,7 @@ public class InterfazCallCenter {
 		Contacto contactoEncontrado = null;
 		
 		for(int i=0; i < contacto.length; i++) {
-			if(contacto[i] != null && contacto[i] == oesteCableColor.buscarCandidato()){
+			if(contacto[i] != null && contacto[i].equals(oesteCableColor.buscarCandidato())){
 				contactoEncontrado = contacto[i];
 			}	
 		}
@@ -267,7 +267,7 @@ public class InterfazCallCenter {
 		if(numero <= probabilidad){
 			llamada = new Llamada(true, "Llamada exitosa");
 			for(int i=0; i < contacto.length; i++){
-				if(contacto[i] != null && contacto[i] == oesteCableColor.buscarCandidato() && contacto[i].isCliente() == false && contacto[i].isDeseaSerLlamadoNuevamente() == true){
+				if(contacto[i] != null && contacto[i].equals(oesteCableColor.buscarCandidato()) && contacto[i].isCliente() == false && contacto[i].isDeseaSerLlamadoNuevamente() == true){
 					contacto[i].setEsCliente(true);
 					contacto[i].setDeseaSerLlamadoNuevamente(false);
 				}	
@@ -275,7 +275,7 @@ public class InterfazCallCenter {
 		}else {
 			llamada = new Llamada(false, "Se debe llamar más adelante");
 			for(int i=0; i < contacto.length; i++){
-				if(contacto[i] != null && contacto[i] == oesteCableColor.buscarCandidato()){
+				if(contacto[i] != null && contacto[i].equals(oesteCableColor.buscarCandidato())){
 					contacto[i].setEsCliente(false);
 					contacto[i].setDeseaSerLlamadoNuevamente(true);
 				}	

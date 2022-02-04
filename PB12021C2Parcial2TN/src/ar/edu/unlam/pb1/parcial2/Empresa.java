@@ -98,7 +98,7 @@ public class Empresa {
 	private Contacto seleccionarUnContactoAleatoriamente(int posicion) {
 		for(int i=0; i < this.contactos.length; i++) {
 			if(this.contactos[posicion] != null && this.contactos[posicion].isCliente() == false && this.contactos[posicion].isDeseaSerLlamadoNuevamente() == true && elCodigoPostalEstaDentroDeLaZonaDeCobertura(this.contactos[posicion].obtenerCodigoPostal()) == true) {				
-				return contactos[posicion];
+				return this.contactos[posicion];
 			}		
 		}
 		return null;
