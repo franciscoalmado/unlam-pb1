@@ -92,6 +92,6 @@ public class Coche {
 
 	@Override
 	public String toString() {
-		return "Coche [ID: " + id + ", marca: " + marca + ", modelo: " + modelo + ", precio: " + precio + "]";
+		return "Coche [ID: " + this.id + ", marca: " + this.marca + ", modelo: " + this.modelo + ", precio: " + this.precio + "]";
 	}	
 }
